@@ -12,7 +12,7 @@ H0_1 = Rz0
 
 % Second joint
 Tz1 = get_Hti(q2,'z');
-Rx1 = int32(get_Hri(pi/2,'x'));
+Rx1 = int32(get_Hri(-pi/2,'x'));
 
 H1_2 = Tz1*Rx1;
 
@@ -55,4 +55,4 @@ j3 = [z_2;
 
 J = [j1, j2, j3]
 
-det(J)
+det(J(1:3,1:3))
